@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 65%;
+    height: auto;
+    background: orange;
+    margin: auto;
+    margin-top: 5%px:
+    padding-bottom: 5px;
+}
+
+.logo {
+    font-size: xx-large;
+    margin: 30px 0 30px 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: brown;
+    border: 1px solid gainsboro;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    opacity: 0.9;
+    background-color: grey;
+}
+
+article {
+  display: flex; /* Flexbox untuk merapikan elemen */
+  flex-wrap: wrap; /* Biar turun ke bawah kalau gak muat */
+  gap: 5px; /* Jarak antar elemen */
+  width: 100%;
+  margin: auto;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+article .konten {
+  flex: 1 1 calc(25% - 10px); /* Lebar 25% untuk 4 kolom */
+  max-width: 25%; /* Batas lebar maksimum */
+  padding: 10px;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+article .isi {
+  flex: 1 1 calc(100% - 10px); /* Lebar 100% untuk 1 kolom */
+  max-width: 100%; /* Batas lebar maksimum */
+  padding: 10px;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  box-sizing: border-box;
+}article .isi .judul{
+    font-size: xx-large;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+article .isi p {
+    margin-top: 0;
+}
+article .isi img {
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+article .konten img {
+    width: 95.5%;
+    height: auto;
+    margin: 5px 5px 5px 5px;
+
+}
+article .konten:hover {
+     opacity: 0.9;
+
+}
+article .konten .judul a {
+  margin-left: 5px;
+  text-decoration: none;
+  font-size: x-large;
+  color: #020101;
+}
+
+article .konten a:hover {
+  opacity: 0.9;
+}
+
+footer {
+  clear: both;
+  width: 98.8%;
+  height: auto;
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  border-radius: 3px;
+  border-bottom: 1px solid gainsboro;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .container, article, footer {
+    float: none;
+    width: 98%;
+  }
+  article .konten {
+    float: left;
+    width: 48%;
+
+  }
+
+  article .konten img {
+    height: 200;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  /* For tablets */
+  .container, article, footer, article .konten {
+    float: none;
+    width: 98%;
+
+  }
+
+  article .konten img {
+    height: 200;
+  }
+
+}
+@media (max-width: 768px) {
+  article .konten,
+  article .isi {
+    flex: 1 1 100%; /* Lebar penuh di layar kecil */
+    max-width: 100%;
+  }
+}
